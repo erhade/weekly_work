@@ -24,5 +24,7 @@ https://www.bilibili.com/video/BV1u34y1h7ah?spm_id_from=333.999.0.0
 4. The tree-related code is in the `tree_data_structure` directory. `tree_data_structure/avl_tree` contains the creation and destruction of complete binary trees, insertion and deletion of binary sorted trees, recursive and non-recursive approaches to tree traversal in pre-order, mid-order, and post-order as well as hierarchical traversal, balancing of binary sorted trees, and deletion of balanced binary trees. `tree_data_structure/trie_tree` is an implementation of the trie tree in the following figure.
 ![trie_tree](./pictures/trie_tree.png)
 5. `tetris_game` is a C implementation of Tetris.
+
 ![tetris_game](./pictures/tetris_game.jpg)
+
 6. `Markdown_tutorial` is an introduction to the syntax of Markdown.
