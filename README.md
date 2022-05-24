@@ -1,5 +1,5 @@
 # weekly_work
-This depository is used to store my weekly work code.
+This repository is used to store my weekly work code.
 ## week01
 1. **uthash**, a library of data structures in C implemented with macros.
 - Project address: https://github.com/troydhanson/uthash
