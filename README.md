@@ -28,3 +28,7 @@ https://www.bilibili.com/video/BV1u34y1h7ah?spm_id_from=333.999.0.0
 ![tetris_game](./pictures/tetris_game.jpg)
 
 6. `Markdown_tutorial` is an introduction to the syntax of Markdown.
+
+## week03
+1. `stdio` is APIs for the standard IO and the system call IO.
+2. `fs` is APIs for the file system.
