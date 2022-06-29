@@ -32,3 +32,12 @@ https://www.bilibili.com/video/BV1u34y1h7ah?spm_id_from=333.999.0.0
 ## week03
 1. `stdio` is APIs for the standard IO and the system call IO.
 2. `fs` is APIs for the file system.
+
+## week04
+Complete the file system section.
+1. Files and directories.
+2. System data files and information.
+3. Process environment.
+
+The project in this section is to implement the `ls` command. I give the implementation in `week_04/myls.c`.
+![myls](./pictures/myls.png)
