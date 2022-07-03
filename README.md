@@ -34,10 +34,27 @@ https://www.bilibili.com/video/BV1u34y1h7ah?spm_id_from=333.999.0.0
 2. `fs` is APIs for the file system.
 
 ## week04
-Complete the file system section.
-1. Files and directories.
-2. System data files and information.
-3. Process environment.
+1. Complete the file system section.
+- Files and directories.
+- System data files and information.
+- Process environment.
 
-The project in this section is to implement the `ls` command. I give the implementation in `week_04/myls.c`.
+The project in this section is to implement the `ls` command. I give the implementation in `week_04/fs/myls.c`.
 ![myls](./pictures/myls.png)
+
+2. Complete the process section.
+- fork
+- wait / waitpid
+- exec family
+- system
+- shell
+- real uid / effective uid
+- real gid / effective gid
+- session / process group
+- foreground process / background process
+- Daemon / Single-Instance Daemon
+- openlog / syslog / closelog
+
+The project in this section is to implement a toy **shell** and a **daemon** with the syslog part. I give the implementation in `week_04/process/mysh.c` and `week_04/process/daemon.c`.
+![mysh](./pictures/mysh.png)
+![daemon](./pictures/daemon.png)
