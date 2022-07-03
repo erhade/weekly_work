@@ -58,3 +58,4 @@ The project in this section is to implement the `ls` command. I give the impleme
 The project in this section is to implement a toy **shell** and a **daemon** with the syslog part. I give the implementation in `week_04/process/mysh.c` and `week_04/process/daemon.c`.
 ![mysh](./pictures/mysh.png)
 ![daemon](./pictures/daemon.png)
+![syslog](./pictures/syslog.png)
