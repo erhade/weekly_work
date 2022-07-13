@@ -59,3 +59,22 @@ The project in this section is to implement a toy **shell** and a **daemon** wit
 ![mysh](./pictures/mysh.png)
 ![daemon](./pictures/daemon.png)
 ![syslog](./pictures/syslog.png)
+
+## week05
+1. Complete the signal section.
+- kill
+- raise
+- pause
+- alarm
+- Leaky bucket model
+- Token bucket model
+- Multitask scheduler
+- setitimer
+- Signal set
+- Signal frequency mask / sigprocmask
+- sigsuspend
+- sigaction
+- Signal driver program
+- Standard signal / Real time signal
+
+The project in this section is to implement a multitask scheduler. I give the implementation in `week_05/signal/anytimer`. Later, it can be extended to multi-threaded concurrency framework.
