@@ -78,3 +78,19 @@ The project in this section is to implement a toy **shell** and a **daemon** wit
 - Standard signal / Real time signal
 
 The project in this section is to implement a multitask scheduler. I give the implementation in `week_05/signal/anytimer`. Later, it can be extended to multi-threaded concurrency framework.
+
+2. Complete the multi-thread section.
+- pthread_t / pthread_equal / pthead_self
+- pthread_create
+- pthread_exit
+- pthread_cleanup_push / pthread_cleanup_pop
+- pthread_cancel / pthread_setcancelstate / pthread_setcanceltype / pthread_testcancel 
+- pthread_join / pthread_detach
+- Multithreaded prime sieve method
+- pthread_mutex_init / pthread_mutex_destroy / pthread_mutex_lock / pthread_mutex_unlock / pthread_mutex_trylock / PTHREAD_MUTEX_INITIALIZER
+- mutex chain / sched_yield
+- Multi-threaded version token bucket
+- pthread_cond_t / pthread_cond_init / pthread_cond_signal / pthread_cond_broadcast / pthread_cond_wait / pthread_cond_timedwait / PTHREAD_COND_INITIALIZER
+- Semaphore / Model of Reader-Writer (Prevent writer hunger)
+
+The project in this section is to implement a multi-threaded version token bucket. I give the implementation used mutex in `week_05/thread/mytbf_thread/` and implementation used conditional variable in `week_05/thread/mytbf_cond/`.
