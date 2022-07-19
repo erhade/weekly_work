@@ -1,13 +1,17 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
-#include <stdbool.h>
-#include <pthread.h>
 #include <string.h>
+#include <pthread.h>
+#include <stdbool.h>
+
+#include "semaphore.h"
 
 #define LEFT    30000000
-#define RIGHT   40000000
+#define RIGHT   30002000
 #define T_NUM   4
+
+sem_t *sem = NULL;
 
 static bool is_prime(int num)
 {
@@ -21,39 +25,42 @@ static bool is_prime(int num)
 
 static void *thread(void *_num)
 {
-    int *num = _num;
-    for (int i = LEFT; i <= RIGHT; i++)
+    int num = *(int *)_num;
+    if (is_prime(num))
     {
-        if (i % T_NUM == (*num) && is_prime(i))
-        {
-            printf("%d is prime\n", i);
-        }
+        printf("%d is prime\n", num);
     }
+    
+    semaphore_add(sem, 1);
     pthread_exit(NULL);
 }
 
 int main(int argc, char const *argv[])
 {
-    int num[T_NUM], ret;
-    pthread_t tid[T_NUM];
-    for (int i = 0; i < T_NUM; i++)
+    int num[RIGHT-LEFT+1], ret;
+    pthread_t tid[RIGHT-LEFT+1];
+    sem = semaphore_init(T_NUM);
+
+    for (int i = LEFT; i <= RIGHT; i++)
     {
-        num[i] = i;
-        if ((ret = pthread_create(tid+i, NULL, thread, num+i)))
+        semaphore_sub(sem, 1);
+        num[i-LEFT] = i;
+        if ((ret = pthread_create(tid+i-LEFT, NULL, thread, num+i-LEFT)))
         {
             fprintf(stderr, "create tid%d: %s\n", i, strerror(ret));
             exit(EXIT_FAILURE);
         }
     }
 
-    for (int i = 0; i < T_NUM; i++)
+    for (int i = LEFT; i <= RIGHT; i++)
     {
-        if ((ret = pthread_join(tid[i], NULL)))
+        if ((ret = pthread_join(tid[i-LEFT], NULL)))
         {
             fprintf(stderr, "join tid%d: %s\n", i, strerror(ret));
             exit(EXIT_FAILURE);
         }
     }
 
+    semaphore_destroy(sem);
     exit(EXIT_SUCCESS);
 }
