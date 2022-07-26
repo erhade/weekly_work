@@ -94,3 +94,19 @@ The project in this section is to implement a multitask scheduler. I give the im
 - Semaphore / Model of Reader-Writer (Prevent writer hunger)
 
 The project in this section is to implement a multi-threaded version token bucket. I give the implementation used mutex in `week_05/thread/mytbf_thread/` and implementation used conditional variable in `week_05/thread/mytbf_cond/`.
+
+## week06
+1. Complete the Advanced IO section.
+- Finite state machine
+- Non-blocking IO
+- Data relay
+- IO multiplexing / select / poll / epoll
+- readv / writev
+- Memory mapping / mmap / munmap
+- lockf
+- Pipe for inter thread communication
+
+The project in this section is to implement a **relay engine** using non-blocking IO and finite state machines and a **pipe** for inter thread communication. I give the implementation in `week_06/relayer/` and `week_06/pipe/`. 
+
+2. Complete the Interprocess communication section.
+- 
