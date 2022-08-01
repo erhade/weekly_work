@@ -109,4 +109,14 @@ The project in this section is to implement a multi-threaded version token bucke
 The project in this section is to implement a **relay engine** using non-blocking IO and finite state machines and a **pipe** for inter thread communication. I give the implementation in `week_06/relayer/` and `week_06/pipe/`. 
 
 2. Complete the Interprocess communication section.
-- 
+- pipe / mkfifo
+- Message Queues
+- Semaphore Arrays
+- Shared Memory Segments
+- Byte order / Structure alignment / Type length unification
+- hton / ntoh / inet_pton / inet_ntop
+- UDP socket / bind / sendto / recvfrom / close
+- UDP broadcast / multicast
+- TCP socket / bind / listen / connect / accept / send / recv / close
+- wireshark
+- http download pictures
